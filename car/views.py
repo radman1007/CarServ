@@ -31,10 +31,6 @@ def service(request):
     return render(request,'service.html')
 
 def testimonial(request):
-    forms = Contact.objects.filter(accept = True)
-    context = {
-        'forms' : forms,
-    }
     return render(request,'testimonial.html',context)
 
 def team(request):
