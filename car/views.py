@@ -5,7 +5,6 @@ def index(request):
     forms = Contact.objects.filter(accept=True)
     forms1 = Team.objects.all()
     context = {
-        'forms' : forms,
         'forms1' : forms1,
     }
     return render(request,'index.html',context)
