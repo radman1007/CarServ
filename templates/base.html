@@ -52,7 +52,7 @@
                         Welcom {{user.username|capfirst}}
                         <form class="btn" action="{% url "logout" %}" method="post">
                             {% csrf_token %}
-                            <button type="submit"></button>
+                            <button type="submit">LOGOUT</button>
                         </form>
                         {% else %}
                         <small class="far fa-clock text-primary me-2"></small>
