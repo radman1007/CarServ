@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect,HttpResponseRedirect,get_object_or_
 from .models import Contact,Service,Comment,News,Team
 from .forms import ContactForm,ServiceForm,CommentForm,NewsForm
 def index(request):
-    forms = Contact.objects.filter(accept=True)
     forms1 = Team.objects.all()
     context = {
         'forms1' : forms1,
