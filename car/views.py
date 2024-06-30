@@ -30,8 +30,8 @@ def about(request):
 def service(request):
     return render(request,'service.html')
 
-def testimonial(request):
-    return render(request,'testimonial.html')
+# def testimonial(request):
+#     return render(request,'testimonial.html')
 
 def team(request):
     forms = Team.objects.filter()
