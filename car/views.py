@@ -31,7 +31,7 @@ def service(request):
     return render(request,'service.html')
 
 def testimonial(request):
-    return render(request,'testimonial.html',context)
+    return render(request,'testimonial.html')
 
 def team(request):
     forms = Team.objects.filter()
