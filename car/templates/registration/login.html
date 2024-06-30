@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Login{% endblock title %}
+{% block _body_ %}
+{% block css %}
+<link href="{% static "css/login.css" %}" rel="stylesheet">
+{% endblock css %}
+<main>
+    <div class="box">
+      <div class="inner-box">
+        <div class="forms-wrap">
+          <form autocomplete="off" class="sign-in-form" action="{% url "login" %}" method="post">
+            {% csrf_token %}
+            <div class="logo">
+              <img src="{% static "img/logo.png" %}" alt="easyclass" />
+            </div>
+            
+            <div class="heading">
+              <h2>Welcome </h2>
+              <h6>Not registred yet?</h6>
+              <a href="#" class="toggle">Sign up</a>
+            </div>
+            
+            <div class="actual-form">
+              <div class="input-wrap">
+                <input
+                type="text"
+                minlength="4"
+                class="input-field"
+                autocomplete="off"
+                required
+                name='username'
+                />
+                <label>Name</label>
+              </div>
+              
+              <div class="input-wrap">
+                <input
+                type="password"
+                minlength="4"
+                class="input-field"
+                autocomplete="off"
+                required
+                name='password'
+                />
+                <label>Password</label>
+              </div>
+              
+              <input type="submit" value="Sign In" class="sign-btn" />
+              
+              <p class="text">
+                Forgotten your password or you login datails?
+                <a href="{% url "password_reset" %}" class=''>Get help</a> signing in
+              </p>
+            </div>
+          </form>
+          
+          <form action="{% url "register" %}" autocomplete="off" class="sign-up-form" method='post'>
+            {% csrf_token %}
+            <div class="logo">
+              <img src="{% static "img/logo.png" %}" alt="easyclass" />
+              <h4>Tchdex</h4>
+            </div>
+            
+            <div class="heading">
+              <h2>Get Started</h2>
+              <h6>Already have an account?</h6>
+              <a href="#" class="toggle">Sign in</a>
+            </div>
+            
+            <div class="actual-form">
+              <div class="input-wrap">
+                <input
+                type="text"
+                minlength="4"
+                class="input-field"
+                autocomplete="off"
+                required
+                name='username'
+                />
+                <label>Name</label>
+              </div>
+              
+              <div class="input-wrap">
+                <input
+                type="password"
+                class="input-field"
+                autocomplete="off"
+                required
+                name='password1'
+                />
+                <label>password</label>
+              </div>
+              
+              <div class="input-wrap">
+                <input
+                type="password"
+                minlength="4"
+                class="input-field"
+                autocomplete="off"
+                required
+                name='password2'
+                />
+                <label>Password Confirmation</label>
+              </div>
+              
+              <button type="submit" value="Sign Up" class="sign-btn">Sing up</button>
+            </div>
+          </form>
+        </div>
+        
+        <div class="carousel">
+          <div class="images-wrapper">
+            <img src="{% static "img/image1.png" %}" class="image img-1 show" alt="" />
+            <img src="{% static "img/image2.png" %}" class="image img-2" alt="" />
+            <img src="{% static "img/image3.png" %}" class="image img-3" alt="" />
+          </div>
+          
+          <div class="text-slider">
+            <div class="text-wrap">
+              <div class="text-group">
+                <h2>Smart with high comfort</h2>
+                <h2>High customer satisfaction</h2>
+                <h2>Super high security</h2>
+              </div>
+            </div>
+            
+            <div class="bullets">
+              <span class="active" data-value="1"></span>
+              <span data-value="2"></span>
+              <span data-value="3"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% block js %}
+<script src="{% static "js/app.js" %}"></script>
+{% endblock js %}
+{% endblock _body_ %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Update{% endblock title %}
+
+{% block _body_ %}
+<div class="card shadow my-3 p-5">
+    <h3>Update:</h3>
+    <form method="POST" action="{% url 'update' post.id %}">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock _body_ %}

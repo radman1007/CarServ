@@ -1,0 +1,127 @@
+.list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.list-ul{
+  margin-top:50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-ul li{
+  margin-right: 20px;
+  color: #111111;
+  font-size:20px;
+}
+.list h3{
+  color: #D81324;
+}
+.list-p{
+  color: #111111;
+}
+.list .second{
+  border: 1px solid #1111;
+  padding: 30px;
+  box-shadow: 2px 5px #888888;
+  margin-bottom:120px;
+}
+.card {
+  margin-top: 150px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color:#111111;
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  position: relative;
+}
+
+.form .group label {
+  font-size: 14px;
+  color: rgb(99, 102, 102);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: white;
+  transition: all .3s ease;
+}
+
+.form .group input,
+.form .group textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
+  top: 10px;
+  background-color: transparent;
+}
+
+.form .group input:focus,
+.form .group textarea:focus {
+  border-color: #0B2154;
+}
+
+.form .group input:focus+ label, .form .group textarea:focus +label {
+  top: -10px;
+  left: 10px;
+  background-color: white;
+  color: #D81324;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form .group textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form button {
+  background-color: #D81324;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #D81324;
+} 
+
+.delete{
+  background-color: #D81324;
+}
+
+.updel{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

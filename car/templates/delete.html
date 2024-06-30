@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Delete{% endblock title %}
+jn
+{% block _body_ %}
+<div class="card shadow my-3 p-5">
+    <h3>Delete:</h3>
+    <form method="POST" action="{%url 'delete' post.id%}">
+        {% csrf_token %}
+        <a href="{% url "post_detail" post.id %}" class="btn btn-info">Go back</a>
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+</div>
+{% endblock _body_ %}
