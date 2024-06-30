@@ -28,7 +28,7 @@ def about(request):
     return render(request,'about.html',context)
 
 def service(request):
-    return render(request,'service.html',context)
+    return render(request,'service.html')
 
 def testimonial(request):
     forms = Contact.objects.filter(accept = True)
