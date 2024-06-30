@@ -48,10 +48,12 @@
       </form>
     </div>
     <br><br>
+    {% if user.is_staff %}
     <div class='updel'>
       <a href="{% url 'update' post.id %}" class="btn btn-warning">Update</a>
       <a href="{% url 'delete' post.id %}" class="btn btn-danger delete">Delete</a>
     </div>
+    {% endif %}
     {% endif %}
 </div>  
 <style>
