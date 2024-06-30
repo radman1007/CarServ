@@ -50,7 +50,7 @@
                     <small>
                         {% if user.is_authenticated %}
                         Welcom {{user.username|capfirst}}
-                        <form class="btn" action="{% url "logout" %}" method="post">
+                        <form class="btn btn-danger" action="{% url "logout" %}" method="post">
                             {% csrf_token %}
                             <button type="submit">LOGOUT</button>
                         </form>
