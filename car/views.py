@@ -1,6 +1,6 @@
-from django.shortcuts import render,redirect,HttpResponseRedirect,get_object_or_404
-from .models import Contact,Service,Comment,News,Team
-from .forms import ContactForm,ServiceForm,CommentForm,NewsForm
+from django.shortcuts import render,redirect,get_object_or_404
+from .models import Service,Comment,Team
+from .forms import ContactForm,ServiceForm,CommentForm
 def index(request):
     forms1 = Team.objects.all()
     context = {
