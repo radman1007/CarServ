@@ -37,5 +37,3 @@ These data fields allow the system to match vehicle owners with the right servic
 - **Backend**: Django 4.x (Python)
 - **Frontend**: HTML5, CSS3, JavaScript (Bootstrap 5 for responsive design)
 - **Database**: SQLite (default Django database)
-
-## Setup Instructions
