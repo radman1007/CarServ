@@ -53,7 +53,7 @@
                         <a href="{% url "logout" %}" class="btn">Logout</a>
                         {% else %}
                         <small class="far fa-clock text-primary me-2"></small>
-                        <a href="{% url "login" %}" class="btn">Login</a>
+                        <a href="{% url "login" %}" class="btn {% if request.resolver_match.url_name == "login" %}active{% endif %}">Login</a>
                         {% endif %}
                     </small>
                 </div>

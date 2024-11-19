@@ -30,14 +30,14 @@ def about(request):
     return render(request,'about.html',context)
 
 def service(request):
-    forms = Contact.objects.filter(accept = True)
+    forms = Contact.objects.filter(accept=True)
     context = {
         'forms' : forms,
     }
     return render(request,'service.html',context)
 
 def testimonial(request):
-    forms = Contact.objects.filter(accept = True)
+    forms = Contact.objects.filter(accept=True)
     context = {
         'forms' : forms,
     }
